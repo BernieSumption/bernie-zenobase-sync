@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Bernie's Zenobase Control Panel</title>
+  </head>
+  <body>
+    <h1>Recent application logs</h1>
+    <p><a href="/poll-now">Click here to poll for new RSS items now</a></p>
+    {% for req_log in req_logs %}
+      <h2>{{ req_log.start_time | isodate }} {{ req_log.ip }} {{ req_log.method }} {{ req_log.resource }}</h2>
+      <pre>
+      {% for app_log in req_log.app_logs -%}
+        {{ "\n" }}{{ app_log.time | isodate }} {{ app_log.message }}
+      {%- else -%}
+        (No log events)
+      {%- endfor %}
+      </pre>
+    {% endfor %}
+  </body>
+</html>

@@ -1,0 +1,7 @@
+# This requirements file lists all dependecies for this project.
+# Run 'pip install -r requirements.txt -t server/lib' to install these dependencies
+# in this project's server/lib directory.
+Flask==0.10
+feedparser==5.1.3
+python-dateutil==2.2
+requests==2.2.0

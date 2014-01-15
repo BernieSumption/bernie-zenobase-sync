@@ -1,0 +1,4 @@
+cron:
+- description: regular polling task
+  url: /poll-now
+  schedule: every 5 minutes
