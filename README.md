@@ -2,7 +2,7 @@
 
 This is a utility for transferring RSS feeds to zenobase. A new zenobase event is created in a specified bucket for every item in the RSS feed. The link and publication date of a feed item is used to prevent duplicate events.
 
-### Running from the command line
+## Running from the command line
 
 It can be run from the command line or as a cron job like so:
 
@@ -10,7 +10,7 @@ It can be run from the command line or as a cron job like so:
            "http://ws.audioscrobbler.com/1.0/user/berniecode/recenttracks.rss" \
            "https://api.zenobase.com/buckets/<bucket id>/?code=<api key>"
 
-### Running on AppEngine
+## Running on AppEngine
 
 **Warning! kinda unsupported...**
 
